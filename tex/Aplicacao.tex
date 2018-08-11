@@ -1,15 +1,17 @@
 \section{Desenvolvimento da ferramenta}
 
-Para o desenvolvimento da ferramenta foi observado a presença de duas etapas em torno do L-System, a primeira que é a parte de reescrita da estrutura inicial seguindo as regras de produção pre-definidas, a segunda etapa gira em torno da interpretação da estrutura final pelo algoritmo da tartaruga.
+%Para o desenvolvimento da ferramenta foi observado a presença de duas etapas em torno do L-System, a primeira que é a parte de reescrita da estrutura inicial seguindo as regras de produção pre-definidas, a segunda etapa gira em torno da interpretação da estrutura final pelo algoritmo da tartaruga.
 
-A segunda etapa por sua vez é mais abstrata, pois cabe ao desenvolvedor que for utilizar a ferramenta possa decidir como vai ser os passos da tartaruga para cada elemento dentro da estrutura final. Com isso foi criado duas classes MonoBehaviour: LSystem e TurtleAgent.
+%A segunda etapa por sua vez é mais abstrata, pois cabe ao desenvolvedor que for utilizar a ferramenta possa decidir como vai ser os passos da tartaruga para cada elemento dentro da estrutura final. Com isso foi criado duas classes MonoBehaviour: LSystem e TurtleAgent.
+
+Para o desenvolvimento da ferramenta, observou-se a presença de duas etapas, a primeira com o processo de reescrita da estrutura inicial com regras pre-definidas e a uma segunda com a interpretação da estrutura final fornecida pela primeira etapa.
 
 \subsection{LSystem}
-Essa classe faz a implementação da primeira etapa, a de reescrever a estrutura por n gerações, nela o usuário irá poder definir a string inicial, números de gerações, tempo de espera entre as gerações da estrutura, se deve chamar os Turtle Agents no final de cada geração e por ultimo mantem as regras de reescrita. Para o armazenamento das regras, foi criado um scriptableobject Ruleset, que armazena uma lista de objetos da classe Rule, por ser um scriptableobject pode se criar um único dicionario e direcionar ele para diversos LSystem que estão presentes na cena, não tendo a necessidade de repetir a mesma regra diversas vezes.
+%Essa classe faz a implementação da primeira etapa, a de reescrever a estrutura por n gerações, nela o usuário irá poder definir a string inicial, números de gerações, tempo de espera entre as gerações da estrutura, se deve chamar os Turtle Agents no final de cada geração e por ultimo mantem as regras de reescrita. Para o armazenamento das regras, foi criado um scriptableobject Ruleset, que armazena uma lista de objetos da classe Rule, por ser um scriptableobject pode se criar um único dicionario e direcionar ele para diversos LSystem que estão presentes na cena, não tendo a necessidade de repetir a mesma regra diversas vezes.
+
+Esse componente faz o processo da primeira etapa, o de reescrever a estrutura inicial através de suas interações, o componente fornece ao desenvolvedor a possibilidade de realizar as configurações básicas do sistema, como o axioma inicial, numero de gerações, setar as lista de regras de reescrita. Para o armazenamo das regras foi criado o objeto Ruleset, um scriptableobject que possui a lista de elementos chaves-valor.
 
 Após terminar a quantidade de gerações máximas definidas, a classe chama os objetos do tipo TurtleAgent passando a string final gerada, assim iniciando a segunda etapa do sistema que é de interpretação da estrutura.
 
 \subsection{TurtleAgent}
-A segunda etapa irá tratar da interpretação dos elementos presentes na estrutura final, para isso ele mantem uma serie de regras que possuem duas propriedades: Symbol e Action, um char e UnityEvent respectivamente. ScriptableObjects possuem certa limitação referente a objetos na cena, por não ter nenhuma ligação direta com a cena dentro da Unity, não é capaz de utilizá-lo para armazenar essa lista de interpretação.
-
-Por utilizar o UnityEvent se cria possibilidade de passar as funções construídas e presentes nos GameObjects da cena, mantendo uma forma de deixar mais genérica a interpretação das estruturas.
+A segunda etapa irá tratar da interpretação dos elementos presentes na estrutura final, para isso ele mantem uma serie de regras que possuem duas propriedades: Symbol e Action, um char e UnityEvent respectivamente. Por utilizar o UnityEvent se cria possibilidade de passar as funções construídas e presentes nos GameObjects da cena, mantendo uma forma de deixar mais genérica a interpretação das estruturas.
