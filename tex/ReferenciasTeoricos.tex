@@ -4,14 +4,7 @@
 \subsection{L-System}
 Originalmente como uma proposta matemática para a geração e simulação de plantas, foi apresentada por Lindenmayer\cite{Prusinkiewicz} para a área de botânica. Trata-se de um sistema que permite a construção de objetos complexos através de uma estrutura simples, tudo seguindo regras de substituição determinadas anteriormente, isso torna uma formula de reescrita de palavras, aplicando de forma paralela e simultânea a substituição de todos os elementos da palavra dada. 
 
-O seu sistema mais simples é denominado de DOL-sistema, onde se possui um alfabeto, axioma e o conjunto de regras de tratamento. Essa estrutura é uma gramatica determinística e livre de contextos onde todas as regras são aplicadas simultaneamente no axioma. A figura \ref{LSystemGenerationExemple} apresenta o processo de reescrita durante as gerações.
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.3\textwidth]{LSystemExample}
-	\caption{Gerações da estrutura seguindo a aplicação do L-System. Fonte: \cite{natureCode}}
-	\label{LSystemGenerationExemple}
-\end{figure}
+O seu sistema mais simples é denominado de DOL-sistema, onde se possui um alfabeto, axioma e o conjunto de regras de tratamento. Essa estrutura é uma gramatica determinística e livre de contextos onde todas as regras são aplicadas simultaneamente no axioma.
 
 \subsection{Turtle Graphics} 
 Turtle Graphics\cite{Abelson} é o método da interpretação gráfica da estrutura criada pelo L-System, sua ideia básica é a suposição de uma tartaruga posicionada no plano cartesiano, a tartaruga é definida por uma tupla <(x,y), $\alpha$ >, onde as coordenadas (x,y) indicam a posição da tartaruga e $\alpha$ o seu angulo.
@@ -36,4 +29,4 @@ Em \cite{togelius2013procedural} refere a geração procedural de conteúdo á a
 Graças a esses algoritmos diminui os custos e tempo de produção desses elementos, dando a possibilidade aos desenvolvedores de se concentrarem em outros aspectos do jogo. Outra vantagem é que essas técnicas são capazes de aumentarem as variedades dos elementos no jogo, aumentando as experiencias do jogador durante suas jogatinas.
 
 \subsection{Unity 3D}
-Um motor de jogos proprietário desenvolvido pela Unity Technologies, permite a implementação dos jogos desenvolvidos nela em diversas plataformas como computadores (Windows, Linux, Mac), dispositivos moveis(Android,IOS), WebGL. Apesar da Unity ser um motor em C++, sua API(Application Programming Interface) para os desenvolvedores é em C\# junto com a plataforma Mono, dando a capacidade de rodar em diversos dispositivos. Graças a essas funcionalidades e sua facilidade de desenvolvimento ela tornou-se um dos principais motores entre os desenvolvedores indies. Ela possui um serviço chamado Unity Asset Store, aonde os desenvolvedores buscam assets para contribuir em seus projetos, desde sprites de personagens e modelos 3D até sistemas de jogos completos.
+Um motor de jogos proprietário desenvolvido pela Unity Technologies, apesar da Unity ser um motor em C++, sua API(Application Programming Interface) para os desenvolvedores é em C\# junto com a plataforma Mono, dando a capacidade de rodar em diversos dispositivos. Possui um serviço chamado Unity Asset Store, aonde os desenvolvedores encontram assets para seus projetos, desde sprites de personagens e modelos 3D até sistemas de jogos completos.
